@@ -5,7 +5,7 @@ from subprocess import PIPE, call
 import aiger
 
 
-SIMPLIFY_TEMPLATE = 'read {0}; dc2; dc2; dc2; rewrite; write_aiger -s {0}'
+SIMPLIFY_TEMPLATE = 'read {0}; dc2; dc2; dc2; fraig; write_aiger -s {0}'
 
 
 def simplify(circ, verbose=False, abc_cmd='abc', aigtoaig_cmd='aigtoaig'):
